@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: xyd-js-docs
+    env: static
+    buildCommand: bunx @xyd-js/cli build
+    staticPublishPath: .xyd/build/client
+    envVars:
+      - key: NODE_VERSION
+        value: 22.x 
+    routes:
+      - type: rewrite
+        source: /
+        destination: /introduction/
+      - type: rewrite
+        source: /index.html
+        destination: /introduction/
