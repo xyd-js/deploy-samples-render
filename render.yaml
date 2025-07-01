@@ -2,8 +2,9 @@ services:
   - type: web
     name: xyd-js-docs
     env: static
-    buildCommand: npm install -g bun && bunx @xyd-js/cli build
+    buildCommand: bunx @xyd-js/cli build
     staticPublishPath: .xyd/build/client 
+    bunVersion: 1.1.0
     routes:
       - type: rewrite
         source: /
