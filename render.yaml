@@ -2,7 +2,7 @@ services:
   - type: web
     name: xyd-js-docs
     env: static
-    buildCommand: bunx @xyd-js/cli build
+    buildCommand: bun x xyd build
     staticPublishPath: .xyd/build/client 
     envVars:
       - key: BUN_VERSION
