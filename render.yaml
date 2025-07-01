@@ -4,7 +4,9 @@ services:
     env: static
     buildCommand: bunx @xyd-js/cli build
     staticPublishPath: .xyd/build/client 
-    bunVersion: 1.1.0
+    envVars:
+      - key: BUN_VERSION
+        value: 1.1.0
     routes:
       - type: rewrite
         source: /
