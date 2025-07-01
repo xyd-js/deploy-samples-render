@@ -2,11 +2,10 @@ services:
   - type: web
     name: xyd-js-docs
     env: static
-    buildCommand: bunx @xyd-js/cli build
-    staticPublishPath: .xyd/build/client
-    envVars:
-      - key: NODE_VERSION
-        value: 22.x 
+    buildCommand: |
+      npm install -g bun
+      bunx @xyd-js/cli build
+    staticPublishPath: .xyd/build/client 
     routes:
       - type: rewrite
         source: /
