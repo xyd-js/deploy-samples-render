@@ -13,10 +13,11 @@
         }
     },
     "navigation": {
-        "header": [
+        "tabs": [
             {
                 "title": "Guides",
-                "page": ""
+                "page": "",
+                "href": "introduction"
             },
             {
                 "title": "API Reference",
@@ -52,5 +53,11 @@
             "source": "openapi.json",
             "route": "api-reference"
         }
-    }
+    },
+    "redirects": [
+        {
+            "source": "index",
+            "destination": "introduction"
+        }
+    ]
 }
